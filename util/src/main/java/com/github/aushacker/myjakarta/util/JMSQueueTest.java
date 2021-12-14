@@ -1,4 +1,4 @@
-package com.github.aushacker.myjakarta;
+package com.github.aushacker.myjakarta.util;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
@@ -13,24 +13,24 @@ import javax.naming.InitialContext;
 
 public class JMSQueueTest {
 
-	public static void main(String[] args) throws Exception {
-        Context context = new InitialContext(); 
+    public static void main(String[] args) throws Exception {
+        Context context = new InitialContext();
 
         ConnectionFactory factory = (ConnectionFactory) context.lookup("amqFactory");
-        Destination destination = (Destination) context.lookup("TestQueue"); 
+        Destination destination = (Destination) context.lookup("TestQueue");
 
         // No auth required if AMQ is configured as anonymous
         Connection connection = factory.createConnection("", "");
-        connection.start(); 
+        connection.start();
 
-        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE); 
+        Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
-        MessageProducer messageProducer = session.createProducer(destination); 
+        MessageProducer messageProducer = session.createProducer(destination);
 
-        TextMessage message = session.createTextMessage("Hello world!"); 
+        TextMessage message = session.createTextMessage("Hello world!");
         messageProducer.send(message, DeliveryMode.NON_PERSISTENT,
-                         Message.DEFAULT_PRIORITY, Message.DEFAULT_TIME_TO_LIVE); 
+                         Message.DEFAULT_PRIORITY, Message.DEFAULT_TIME_TO_LIVE);
 
-        connection.close(); 
-	}
+        connection.close();
+    }
 }
