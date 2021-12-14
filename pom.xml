@@ -36,6 +36,7 @@
 
     <modules>
         <module>util</module>
+        <module>web</module>
     </modules>
 
     <properties>
