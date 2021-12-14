@@ -11,10 +11,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>myjakarta-web</artifactId>
-    <packaging>war</packaging>
+    <artifactId>myjakarta-ejb</artifactId>
+    <packaging>ejb</packaging>
 
-    <name>Web module</name>
+    <name>EJB module</name>
 
     <dependencies>
         <dependency>
