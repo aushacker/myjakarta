@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 @WebServlet("/ds")
 public class DataSourceServlet extends HttpServlet {
 
-    @Resource(lookup = "java:/NorthwindDS")
+    @Resource(lookup = "java:jboss/datasources/mynw_mysql")
     private DataSource northwindDS;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
