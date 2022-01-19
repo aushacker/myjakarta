@@ -8,12 +8,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-public class DataSourceTest extends HttpServlet {
+@WebServlet("/ds")
+public class DataSourceServlet extends HttpServlet {
 
     @Resource(lookup = "java:/NorthwindDS")
     private DataSource northwindDS;
