@@ -7,7 +7,7 @@
     version="7.0">
 
     <resource-ref>
-        <res-ref-name>java:/NorthwindDS</res-ref-name>
+        <res-ref-name>jdbc/NorthwindDS</res-ref-name>
         <jndi-name>java:jboss/datasources/mynw_mysql</jndi-name>
     </resource-ref>
 
