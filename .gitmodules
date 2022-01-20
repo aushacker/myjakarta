@@ -1,3 +1,0 @@
-[submodule "s2i/custom/modules"]
-	path = s2i/custom/modules
-	url = https://github.com/aushacker/jboss-jdbc/
