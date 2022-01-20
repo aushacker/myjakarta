@@ -8,7 +8,6 @@
         <description>Northwind database</description>
         <res-ref-name>jdbc/NorthwindDS</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
-        <res-auth>CONTAINER</res-auth>
     </resource-ref>
 
 </web-app>
